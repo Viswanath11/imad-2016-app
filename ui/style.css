@@ -4,6 +4,11 @@ html, body {
     line-height: 1.5;
 }
 
+html, head{
+    font-weight:bold;
+    font-size:300%;
+}
+
 .center {
     text-align: center;
 }
