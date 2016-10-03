@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 var Chapters = {
- ChapterOne:{
+    
+ 'ChapterOne':{
      heading:'Chapter One',
      title:'Chapter 1',
      home:`<a href="http://viswanath11.imad.hasura-app.io/">
@@ -27,15 +28,61 @@ I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was 
 </p>
 <p>I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!
 </p>`
+ },
+ 'ChapterTwo':{
+     heading:'Chapter Two',
+     title:'Chapter 2',
+     home:`<a href="http://viswanath11.imad.hasura-app.io/">
+        Goto Home! 		
+        </a>`,
+     link:`<p>		
+        P.S  Rest of the story continued on 
+        <a href="http://viswanath11.imad.hasura-app.io/ChapterThree">
+        ChapterThree
+        </a>
+        </p>`,
+     content:
+     `<p>        I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!	
+</p>
+<p>
+I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!
+</p>
+<p>
+I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!I came running out of school on my first day!
+</p>`},
+ 'ChapterThree':{
+     heading:'Chapter Three',
+     title:'Chapter 3',
+     home:`<a href="http://viswanath11.imad.hasura-app.io/">
+        Goto Home! 		
+        </a>`,
+     link:`<p>		
+        P.S
+        <a href="http://viswanath11.imad.hasura-app.io/">
+        The End
+        </a>
+        </p>`,
+     content:
+     `<p> 
+       Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . 
+</p>
+<p>
+Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . 
+</p>
+<p>
+Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . Growth and Development via The Search continues. . 
+</p>`
  }
+ 
 };
 
 function createtemplate(data)={
     var heading=data.heading;
     var title=data.title;
     var home=data.home;
-    var content=data.content;
     var link=data.link;
+    var content=data.content;
+    
 var htmlcasing =`
   
   <html>		
@@ -65,15 +112,8 @@ return htmlcasing;
 }
 
 app.get('/:ChapterNumber', function (req, res) {
+    var ChapterNumber = req.params.ChapterNumber;
   res.send(createtemplate(Chapters[ChapterNumber]));
-});
-
-app.get('/ChapterTwo', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ChapterTwo.html'));
-});
-
-app.get('/ChapterThree', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ChapterThree.html'));
 });
 
 app.get('/', function (req, res) {
