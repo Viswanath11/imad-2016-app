@@ -30,7 +30,13 @@ I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was 
  }
 };
 
-var htmlcasing ={
+function createtemplate(data)={
+    var heading=data.heading;
+    var title=data.title;
+    var home=data.home;
+    var content=data.content;
+    var link=data.link;
+var htmlcasing =`
   
   <html>		
     <head>		
@@ -38,10 +44,10 @@ var htmlcasing ={
         ${heading}
         </h1>
 <link href="/ui/style.css" rel="stylesheet"/>
-	<Title>
-	   ${title}
-	   <link href="/ui/style.css rel="stylesheet"/>
-	</Title>
+      <Title>
+	        ${title}
+	        <link href="/ui/style.css rel="stylesheet"/>
+	    </Title>
     </head>		
     <body>		
         <div class=home> 		
@@ -53,14 +59,13 @@ var htmlcasing ={
         <br>		
         ${link}
     </body>		
-</html>
+</html>`;
 
-    
-};
+return htmlcasing;
+}
 
-
-app.get('/ChapterOne', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ChapterOne.html'));
+app.get('/:ChapterNumber', function (req, res) {
+  res.send(createtemplate(Chapters[ChapterNumber]));
 });
 
 app.get('/ChapterTwo', function (req, res) {
