@@ -5,6 +5,60 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var Chapters = {
+ ChapterOne:{
+     heading:'Chapter One',
+     title:'Chapter 1',
+     home:`<a href="http://viswanath11.imad.hasura-app.io/">
+        Goto Home! 		
+        </a>`,
+     link:`<p>		
+        P.S  Rest of the story continued on 
+        <a href="http://viswanath11.imad.hasura-app.io/ChapterTwo">
+        ChapterTwo
+        </a>
+        </p>`,
+     content:
+     `<p>
+     I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!		
+</p>
+<p>
+I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!
+</p>
+<p>I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!I was born on August 11th, a Tuesday!
+</p>`
+ }
+};
+
+var htmlcasing ={
+  
+  <html>		
+    <head>		
+        <h1>
+        ${heading}
+        </h1>
+<link href="/ui/style.css" rel="stylesheet"/>
+	<Title>
+	   ${title}
+	   <link href="/ui/style.css rel="stylesheet"/>
+	</Title>
+    </head>		
+    <body>		
+        <div class=home> 		
+        ${home}
+        </div>		
+        <div class=center text-big bold>		
+        ${content}
+        </div>		
+        <br>		
+        ${link}
+    </body>		
+</html>
+
+    
+};
+
+
 app.get('/ChapterOne', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ChapterOne.html'));
 });
