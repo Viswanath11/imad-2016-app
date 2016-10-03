@@ -33,3 +33,11 @@ a:hover {
 .img-medium {
     height: 200px;
 }
+.text-big {
+    font-size: 300%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
