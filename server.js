@@ -74,7 +74,7 @@ Growth and Development via The Search continues. . Growth and Development via Th
 </p>`
  }
  
-}
+};
 
 function createtemplate(data)={
     var heading=data.heading;
